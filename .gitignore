@@ -4,4 +4,5 @@ dist/
 .DS_Store
 node_modules/
 npm-debug.log
-data/
+data/postgres/
+data/postgres-test/
