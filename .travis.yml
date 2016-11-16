@@ -6,10 +6,10 @@ node_js:
 
 before_script:
   - npm run build
-  - npm run lint
 
 script:
-  - npm run coverage
+  - npm run lint
+  - npm run test
 
 after_script:
   - npm run update-coveralls
