@@ -12,7 +12,7 @@ services:
     - docker
 
 before_script:
-  - docker-compose -f docker-compose.dev.yml -d up mongo-test
+  - docker-compose -f docker-compose.dev.yml up -d mongo-test
   - npm run build
 
 script:
