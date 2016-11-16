@@ -4,6 +4,7 @@ declare module "supertest" {
   module supertest {
     interface Test extends superagent.Request {
       url: string;
+      set(field: string, val: string): Test;
       serverAddress(app: any, path: string): string;
       expect(status: number, callback?: (err: Error, res: superagent.Response) => void): Test;
       expect(status: number, body: string, callback?: (err: Error, res: superagent.Response) => void): Test;

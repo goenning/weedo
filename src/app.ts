@@ -7,10 +7,14 @@ app.set('view engine', 'pug');
 app.set('views', './views');
 
 app.use(async (req, res, next) => {
-  res.locals.settings = await getSiteSettings(req.headers['host']);
+  const host = `${req.protocol}://${req.get('host')}`;
+  res.locals.settings = await getSiteSettings(host);
+  if (!res.locals.settings) {
+    return res.status(404).send();
+  }
   next();
 });
 
 app.get('/', (req, res, next) => {
-  res.render('index', { message: res.locals.settings.name });
+  res.render('index', { message: res.locals.settings });
 });

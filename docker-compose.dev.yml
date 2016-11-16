@@ -1,0 +1,14 @@
+version: '2'
+services:
+  mongo-dev:
+    image: mongo:3.2
+    ports:
+      - 27020:27017
+    volumes:
+      - ./data/mongo-dev:/data/db
+  mongo-test:
+    image: mongo:3.2
+    ports:
+      - 27021:27017
+    volumes:
+      - ./data/mongo-test:/data/db
