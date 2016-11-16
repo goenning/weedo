@@ -5,7 +5,7 @@
   "branches": 100,
   "check-coverage": true,
   "include": [
-    "dist/src/**/*.js"
+    "dist/app/**/*.js"
   ],
   "reporter": [
     "lcov",
