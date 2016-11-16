@@ -4,7 +4,13 @@ node_js:
   - "5"
   - "stable"
 
+sudo: required
+
+services:
+    - docker
+
 before_script:
+  - docker-compose -f docker-compose.dev.yml up mongo-test
   - npm run build
 
 script:

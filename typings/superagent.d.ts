@@ -30,8 +30,6 @@ declare module "superagent" {
     attach(field: string, file: string, filename: string): Request;
     redirects(n: number): Request;
     part(): Request;
-    set(field: string, val: string): Request;
-    set(field: Object): Request;
     get(field: string): string;
     type(val: string): Request;
     query(val: Object): Request;
