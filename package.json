@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tsc",
     "lint": "tslint 'src/**/*.ts' 'test/**/*.ts'",
-    "test": "nyc mocha dist/test"
+    "test": "nyc mocha dist/test",
+    "update-coveralls": "nyc report --reporter=text-lcov | coveralls"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +16,7 @@
     "@types/chai": "^3.4.34",
     "@types/mocha": "^2.2.33",
     "chai": "^3.5.0",
+    "coveralls": "^2.11.15",
     "mocha": "^3.1.2",
     "nyc": "^8.4.0",
     "typescript": "^2.1.1"
