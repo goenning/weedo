@@ -8,6 +8,7 @@
     "dist/": true,
     "coverage/": true,
     ".nyc_output/": true,
-    "npm-debug.log": true
+    "npm-debug.log": true,
+    "data/": true
   }
 }

@@ -1,0 +1,6 @@
+version: '2'
+services:
+  mongo:
+    image: mongo:3.2
+    volumes:
+      - ./data/mongo-test:/data/db
