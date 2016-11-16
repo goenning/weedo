@@ -1,0 +1,7 @@
+{
+  "production": { 
+    "ENV": "DATABASE_URL" 
+  },
+  "development": "postgres://weedo:weedo-pw@localhost:5555/weedo",
+  "test": "postgres://weedo-test:weedo-test-pw@localhost:5556/weedo-test"
+}

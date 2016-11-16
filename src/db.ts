@@ -1,26 +1,16 @@
-import * as mongo from 'mongodb';
+const pgp = require('pg-promise');
 import config from './config';
 
-const connect = () => mongo.MongoClient.connect(config.MONGO_URL);
+export const db = pgp()(config.DATABASE_URL);
 
-async function findOne<T>(collectionName: string, query: Object): Promise<T | null> {
-  const db = await connect();
-  return db.collection(collectionName).findOne(query);
-};
+// export function one<T>(query: string, values?: any): Promise<T> {
+//   return db.one(query, values);
+// }
 
-/*async function insert(collectionName: string, docs: Object) {
-  const db = await connect();
-  return db.collection(collectionName).insertOne(docs);
-};*/
+export function oneOrNone<T>(query: string, values?: any): Promise<T | null> {
+  return db.oneOrNone(query, values);
+}
 
-async function insertMany(collectionName: string, ...docs: Object[]) {
-  const db = await connect();
-  return db.collection(collectionName).insertMany(docs);
-};
-
-export default {
-  findOne,
-  // insert,
-  connect,
-  insertMany
-};
+export function execute(query: string, values?: any): Promise<void> {
+  return db.query(query, values);
+}

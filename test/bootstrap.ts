@@ -1,19 +1,26 @@
-import db from '../src/db';
+import { execute } from '../src/db';
+import { execSync } from 'child_process';
 
 export const orangeSettings = {
+  id: 1,
   name: 'Orange Inc.',
-  hostname: 'orange',
-  color: 'orange'
+  hostname: 'orange'
 };
 
 export const theTriShopSettings = {
+  id: 2,
   name: 'TRI Shop',
-  hostname: 'feedback.thetrishop.com',
-  color: 'red'
+  hostname: 'feedback.thetrishop.com'
 };
 
-beforeEach(async () => {
-  const conn = await db.connect();
-  await conn.dropDatabase();
-  return await db.insertMany('sites', orangeSettings, theTriShopSettings);
+before(async () => {
+  await execute('drop schema public cascade; create schema public;');
+  execSync('npm run migrate-up -- -e test');
+
+  const insertSite = `insert into sites (id, name, hostname, created_on, modified_on) 
+                      values ($[id], $[name], $[hostname], now(), now())`;
+  await [
+    execute(insertSite, orangeSettings),
+    execute(insertSite, theTriShopSettings)
+  ];
 });

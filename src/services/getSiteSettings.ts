@@ -1,8 +1,10 @@
 import { SiteSettings } from '../models/SiteSettings';
-import db from '../db';
+import { oneOrNone } from '../db';
 import { parse } from 'url';
 
-const findByHostname = (hostname: string) => db.findOne<SiteSettings>('sites', { hostname });
+const findByHostname = (hostname: string) => {
+  return oneOrNone<SiteSettings>('SELECT id, name, hostname FROM sites WHERE hostname = $1', hostname);
+};
 
 export async function getSiteSettings(host: string): Promise<SiteSettings | null>  {
   const url = parse(host);

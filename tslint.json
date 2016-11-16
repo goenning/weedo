@@ -14,6 +14,8 @@
       "quotemark": [
         true, "single"
       ],
+      "no-reference": false, //remove when pg-promise#238 is merged
+      "no-var-requires": false, //remove when pg-promise#238 is merged
       "no-string-literal": false,
       "ordered-imports": false,
       "object-literal-sort-keys": false,

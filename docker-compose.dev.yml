@@ -1,14 +1,22 @@
 version: '2'
 services:
-  mongo-dev:
-    image: mongo:3.2
-    ports:
-      - 27020:27017
+  postgres:
+    restart: always
+    image: postgres:9.4
     volumes:
-      - ./data/mongo-dev:/data/db
-  mongo-test:
-    image: mongo:3.2
+      - ./data/postgres:/var/lib/postgresql/data
     ports:
-      - 27021:27017
+      - "5555:5432"
+    environment:
+      POSTGRES_USER: weedo
+      POSTGRES_PASSWORD: weedo-pw
+  postgres-test:
+    restart: always
+    image: postgres:9.4
+    ports:
+      - "5556:5432"
     volumes:
-      - ./data/mongo-test:/data/db
+      - ./data/postgres-test:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: weedo-test
+      POSTGRES_PASSWORD: weedo-test-pw
