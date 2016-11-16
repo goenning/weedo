@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "lint": "tslint 'src/**/*.ts' 'test/**/*.ts'",
-    "test": "NODE_ENV=test nyc mocha 'dist/test/**/*.js'",
+    "test": "NODE_ENV=test nyc mocha dist/test --recursive",
     "update-coveralls": "nyc report --reporter=text-lcov | coveralls",
     "dev": "nodemon dist/src/index.js",
     "migrate-up": "db-migrate up",
