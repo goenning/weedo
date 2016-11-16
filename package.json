@@ -1,0 +1,26 @@
+{
+  "name": "weedo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "lint": "tslint 'src/**/*.ts' 'test/**/*.ts'",
+    "test": "nyc mocha dist/test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^3.4.34",
+    "@types/mocha": "^2.2.33",
+    "chai": "^3.5.0",
+    "mocha": "^3.1.2",
+    "nyc": "^8.4.0",
+    "typescript": "^2.1.1"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "pug": "^2.0.0-beta6"
+  }
+}

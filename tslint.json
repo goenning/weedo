@@ -1,0 +1,21 @@
+{
+    "extends": "tslint:latest",
+    "rules": {
+      "interface-name": [
+          true,
+          "never-prefix"
+      ],
+      "no-console": [
+        false
+      ],
+      "member-ordering": [
+        false
+      ],
+      "quotemark": [
+        true, "single"
+      ],
+      "ordered-imports": false,
+      "object-literal-sort-keys": false,
+      "trailing-comma": [true, {"multiline": "never", "singleline": "never"}]
+    }
+}
