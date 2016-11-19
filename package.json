@@ -4,11 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
     "lint": "tslint 'src/**/*.ts' 'test/**/*.ts'",
     "test": "NODE_ENV=test nyc mocha dist/test --recursive",
     "update-coveralls": "nyc report --reporter=text-lcov | coveralls",
     "dev": "nodemon dist/src/index.js",
+    "watch": "tsc -w & npm run watch:css",
+    "build:ts": "tsc",
+    "build:css": "node-sass --include-path assets/scss assets/scss/main.scss public/css/main.css",
+    "watch:css": "nodemon -e scss --watch assets/scss -x \"npm run build:css\"",
     "migrate-up": "db-migrate up",
     "migrate-reset": "db-migrate reset"
   },
@@ -25,6 +28,7 @@
     "db-migrate": "^0.10.0-beta.20",
     "db-migrate-pg": "^0.1.11",
     "mocha": "^3.1.2",
+    "node-sass": "^3.13.0",
     "nodemon": "^1.11.0",
     "nyc": "^9.0.1",
     "supertest": "^2.0.1",

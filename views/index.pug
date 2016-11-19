@@ -1,4 +1,6 @@
 extends layouts/base.pug
 
 block content
-  h1= message
+  h2 How can we improve #{locals.site.name}?
+  
+  input(id="new-idea", placeholder="My idea is...")

@@ -9,6 +9,7 @@
     "coverage/": true,
     ".nyc_output/": true,
     "npm-debug.log": true,
-    "data/": true
+    "data/": true,
+    "public/": true
   }
 }
