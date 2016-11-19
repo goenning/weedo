@@ -9,6 +9,9 @@
     "coverage/": true,
     ".nyc_output/": true,
     "npm-debug.log": true,
-    "data/": true
+    "data/": true,
+    "public/css/*.css": true,
+    "public/scripts/*.js": true,
+    "public/scripts/*.js.map": true
   }
 }

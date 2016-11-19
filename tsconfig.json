@@ -7,5 +7,9 @@
         "outDir": "dist",
         "strictNullChecks": true,
         "noUnusedLocals": true
-    }
+    },
+    "exclude": [
+        "node_modules",
+        "public/scripts"
+    ]
 }

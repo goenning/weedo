@@ -8,10 +8,11 @@
     "test": "NODE_ENV=test nyc mocha dist/test --recursive",
     "update-coveralls": "nyc report --reporter=text-lcov | coveralls",
     "dev": "nodemon dist/src/index.js",
-    "watch": "tsc -w & npm run watch:css",
-    "build:ts": "tsc",
-    "build:css": "node-sass --include-path public/scss public/scss/main.scss public/css/main.css",
-    "watch:css": "nodemon -e scss --watch public/scss -x \"npm run build:css\"",
+    "watch": "tsc -w & npm run watch:ts & npm run watch:css",
+    "build:ts": "webpack",
+    "watch:ts": "nodemon -e ts --watch public/scripts -x \"npm run build:ts\"",
+    "build:css": "node-sass --include-path public/css public/css/main.scss public/css/main.css",
+    "watch:css": "nodemon -e scss --watch public/css -x \"npm run build:css\"",
     "migrate-up": "db-migrate up",
     "migrate-reset": "db-migrate reset"
   },
@@ -32,9 +33,11 @@
     "nodemon": "^1.11.0",
     "nyc": "^9.0.1",
     "supertest": "^2.0.1",
+    "ts-loader": "^1.2.2",
     "ts-node": "^1.7.0",
     "tslint": "^3.15.1",
-    "typescript": "^2.1.1"
+    "typescript": "^2.1.1",
+    "webpack": "^1.13.3"
   },
   "dependencies": {
     "express": "^4.14.0",

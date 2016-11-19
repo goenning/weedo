@@ -1,0 +1,16 @@
+extends base.pug
+
+block head
+  title= locals.site.name
+
+block body
+  .ui.inverted.vertical.masthead.aligned.segment
+    .ui.container
+      h1.ui.inverted.header
+        | #{locals.site.name}
+      .ui.large.secondary.inverted.pointing.menu
+        a.item Home
+        a.active.item Feedback
+
+  .ui.container
+    block content

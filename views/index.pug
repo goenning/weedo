@@ -1,6 +1,6 @@
-extends layouts/base.pug
+extends layouts/home.pug
 
 block content
   h2 How can we improve #{locals.site.name}?
   
-  input(id="new-idea", placeholder="My idea is...")
+  span(id="new-idea", contenteditable="true", data-placeholder="My idea is ...")
