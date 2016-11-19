@@ -1569,7 +1569,7 @@ make-error@^1.1.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/make-error/-/make-error-1.2.1.tgz#9a6dfb4844423b9f145806728d05c6e935670e75"
 
-manakin@^0.4.6:
+manakin@0.4:
   version "0.4.6"
   resolved "https://registry.yarnpkg.com/manakin/-/manakin-0.4.6.tgz#759e265370c5cfeca5e02022981be7e6a56cd735"
 
@@ -1954,14 +1954,14 @@ pg-minify@0.3:
   version "0.3.5"
   resolved "https://registry.yarnpkg.com/pg-minify/-/pg-minify-0.3.5.tgz#f90fc142ae769b932103c09c646f48256292f54c"
 
-pg-promise@^5.3.5:
-  version "5.3.5"
-  resolved "https://registry.yarnpkg.com/pg-promise/-/pg-promise-5.3.5.tgz#d7aafc640ea5b117fd9f3b357fe8272590097527"
+pg-promise@^5.3.6:
+  version "5.3.6"
+  resolved "https://registry.yarnpkg.com/pg-promise/-/pg-promise-5.3.6.tgz#2e4a6b74a02728421f92e5344da9aedc08a6854d"
   dependencies:
-    manakin "^0.4.6"
+    manakin "0.4"
     pg "5.1"
     pg-minify "0.3"
-    spex "1.x"
+    spex "1.0"
 
 pg-types@1.*:
   version "1.11.0"
@@ -2489,7 +2489,7 @@ spdx-license-ids@^1.0.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/spdx-license-ids/-/spdx-license-ids-1.2.2.tgz#c9df7a3424594ade6bd11900d596696dc06bac57"
 
-spex@1.x:
+spex@1.0:
   version "1.0.17"
   resolved "https://registry.yarnpkg.com/spex/-/spex-1.0.17.tgz#75ea76852c74818a4aaf913b8e188ac7ae093863"
 
