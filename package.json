@@ -8,6 +8,7 @@
     "test": "NODE_ENV=test nyc mocha dist/test --recursive",
     "update-coveralls": "nyc report --reporter=text-lcov | coveralls",
     "dev": "nodemon dist/src/index.js",
+    "build": "tsc && npm run build:ts && npm run build:css",
     "watch": "tsc -w & npm run watch:ts & npm run watch:css",
     "build:ts": "webpack",
     "watch:ts": "nodemon -e ts --watch public/scripts -x \"npm run build:ts\"",

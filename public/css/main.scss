@@ -1,0 +1,20 @@
+span#new-idea {
+  font-size: 40px;
+  text-align: left;
+  margin-top: 50px;
+  border: none;
+  cursor: pointer;
+  padding: 0px 10px 10px 10px;
+  color: orange;
+  border-bottom: 1px dotted orange;
+  display: inline-block;
+  line-height: 50px;
+
+  &:focus{
+      outline: none;
+  }
+  
+  &:empty:not(:focus)::before{
+      content:attr(data-placeholder)
+  }
+}
