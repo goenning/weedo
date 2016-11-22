@@ -1,20 +1,47 @@
-span#new-idea {
-  font-size: 40px;
-  text-align: left;
-  margin-top: 50px;
-  border: none;
-  cursor: pointer;
-  padding: 0px 10px 10px 10px;
-  color: orange;
-  border-bottom: 1px dotted orange;
-  display: inline-block;
-  line-height: 50px;
+*:focus{
+    outline: none;
+}
 
-  &:focus{
-      outline: none;
-  }
+#new-idea {
+    font-size: 40px;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    padding: 0px 10px 10px 10px;
+    color: orange;
+    border-bottom: 1px dotted orange;
+    display: inline-block;
+    line-height: 50px;
+    margin-bottom: 40px;
   
-  &:empty:not(:focus)::before{
-      content:attr(data-placeholder)
-  }
+    &:empty:not(:focus)::before{
+        content:attr(data-placeholder)
+    }
+}
+
+.new-idea-invite {
+    color: gray;
+    margin-top:20px;
+    font-size:30px;
+}
+
+#idea-actions {
+    display:none;
+
+    #add-idea {
+        background-color: orange;
+        border: none;
+        font-size: 20px;
+        color: white;
+        padding: 12px 26px;
+    }
+
+    #cancel-idea {
+        font-size: 16px;
+        margin-left: 10px;
+        padding: 10px 20px;
+        display: inline-block;
+        border: none;
+        background-color: transparent;
+    }
 }

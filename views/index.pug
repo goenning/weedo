@@ -1,6 +1,10 @@
 extends layouts/home.pug
 
 block content
-  h2 How can we improve #{locals.site.name}?
+  p.new-idea-invite How can we improve #{locals.site.name}?
   
-  span(id="new-idea", contenteditable="true", data-placeholder="My idea is ...")
+  span#new-idea(contenteditable="true", data-placeholder="My idea is ...")
+
+  p#idea-actions
+    button#add-idea Add idea
+    button#cancel-idea Cancel
