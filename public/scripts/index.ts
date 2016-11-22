@@ -1,5 +1,5 @@
-const newIdea = document.querySelector('#new-idea');
-const cancelIdea = document.querySelector('#cancel-idea');
+const newIdea = <HTMLSpanElement> document.querySelector('#new-idea');
+const cancelIdea = <HTMLButtonElement> document.querySelector('#cancel-idea');
 const ideaActions = <HTMLParagraphElement> document.querySelector('#idea-actions');
 
 const hideOrShowActions = () => {
@@ -7,6 +7,7 @@ const hideOrShowActions = () => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
+  $('.menu .item').tab();
 
   newIdea.addEventListener('keyup', () => {
     hideOrShowActions();

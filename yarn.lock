@@ -19,6 +19,10 @@
   dependencies:
     "@types/node" "*"
 
+"@types/jquery@^2.0.34":
+  version "2.0.34"
+  resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-2.0.34.tgz#27615b369f30e572336126514e74672dda6e3d04"
+
 "@types/mime@*":
   version "0.0.29"
   resolved "https://registry.yarnpkg.com/@types/mime/-/mime-0.0.29.tgz#fbcfd330573b912ef59eeee14602bface630754b"
@@ -1570,6 +1574,10 @@ jodid25519@^1.0.0:
   dependencies:
     jsbn "~0.1.0"
 
+jquery@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.1.1.tgz#347c1c21c7e004115e0a4da32cece041fad3c8a3"
+
 js-stringify@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/js-stringify/-/js-stringify-1.0.2.tgz#1736fddfd9724f28a3682adc6230ae7e4e9679db"
@@ -1664,7 +1672,7 @@ load-json-file@^1.0.0:
     pinkie-promise "^2.0.0"
     strip-bom "^2.0.0"
 
-loader-utils@^0.2.11, loader-utils@^0.2.6:
+loader-utils@^0.2.11, loader-utils@^0.2.6, loader-utils@~0.2.2:
   version "0.2.16"
   resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-0.2.16.tgz#f08632066ed8282835dff88dfb52704765adee6d"
   dependencies:
@@ -2321,14 +2329,14 @@ pg-minify@0.3:
   version "0.3.5"
   resolved "https://registry.yarnpkg.com/pg-minify/-/pg-minify-0.3.5.tgz#f90fc142ae769b932103c09c646f48256292f54c"
 
-pg-promise@^5.3.6:
-  version "5.3.6"
-  resolved "https://registry.yarnpkg.com/pg-promise/-/pg-promise-5.3.6.tgz#2e4a6b74a02728421f92e5344da9aedc08a6854d"
+pg-promise@^5.4.3:
+  version "5.4.3"
+  resolved "https://registry.yarnpkg.com/pg-promise/-/pg-promise-5.4.3.tgz#4b5a91dccdcb8dafd0699a660c2ad80af59e17b9"
   dependencies:
     manakin "0.4"
     pg "5.1"
     pg-minify "0.3"
-    spex "1.0"
+    spex "1.1"
 
 pg-types@1.*:
   version "1.11.0"
@@ -2871,6 +2879,14 @@ source-list-map@~0.1.0:
   version "0.1.6"
   resolved "https://registry.yarnpkg.com/source-list-map/-/source-list-map-0.1.6.tgz#e1e6f94f0b40c4d28dcf8f5b8766e0e45636877f"
 
+source-map-loader@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/source-map-loader/-/source-map-loader-0.1.5.tgz#0ec6ca58aa0e61463a28673dd4c49e8ba67dc718"
+  dependencies:
+    async "^0.9.0"
+    loader-utils "~0.2.2"
+    source-map "~0.1.33"
+
 source-map-support@^0.4.0:
   version "0.4.6"
   resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.4.6.tgz#32552aa64b458392a85eab3b0b5ee61527167aeb"
@@ -2886,6 +2902,12 @@ source-map@0.4.x, source-map@^0.4.4, source-map@~0.4.1:
 source-map@^0.5.0, source-map@^0.5.3, source-map@~0.5.1:
   version "0.5.6"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.5.6.tgz#75ce38f52bf0733c5a7f0c118d81334a2bb5f412"
+
+source-map@~0.1.33:
+  version "0.1.43"
+  resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.1.43.tgz#c24bc146ca517c1471f5dacbe2571b2b7f9e3346"
+  dependencies:
+    amdefine ">=0.0.4"
 
 spawn-wrap@^1.2.4:
   version "1.2.4"
@@ -2912,9 +2934,9 @@ spdx-license-ids@^1.0.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/spdx-license-ids/-/spdx-license-ids-1.2.2.tgz#c9df7a3424594ade6bd11900d596696dc06bac57"
 
-spex@1.0:
-  version "1.0.17"
-  resolved "https://registry.yarnpkg.com/spex/-/spex-1.0.17.tgz#75ea76852c74818a4aaf913b8e188ac7ae093863"
+spex@1.1:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/spex/-/spex-1.1.0.tgz#d72176438bc238933fd62e010deb26bb4bb006d0"
 
 split@0.3, split@~0.3:
   version "0.3.3"

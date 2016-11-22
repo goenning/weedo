@@ -6,7 +6,6 @@ exports.up = function (db, done) {
     created_on: 'datetime',
     modified_on: 'datetime'
   }, done);
-  done();
 };
 
 exports.down = function (db, done) {

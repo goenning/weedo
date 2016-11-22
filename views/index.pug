@@ -3,8 +3,31 @@ extends layouts/home.pug
 block content
   p.new-idea-invite How can we improve #{locals.site.name}?
   
-  span#new-idea(contenteditable="true", data-placeholder="My idea is ...")
+  span#new-idea.ui.orange.header(contenteditable="true", data-placeholder="My idea is ...")
 
-  p#idea-actions
-    button#add-idea Add idea
-    button#cancel-idea Cancel
+  #idea-actions
+    .ui.big.buttons
+      button#add-idea.ui.orange.button Add Idea
+      .or
+      button#cancel-idea.ui.button Cancel
+
+  .ui.tabular.top.attached.compact.menu
+    a.item(data-tab="tab-name")
+      i.video.camera.icon 
+      | Channels
+    a.item.active(data-tab="tab-name2")
+      i.video.camera.icon 
+      | Channels
+    .ui.dropdown.item
+      i.video.camera.icon
+      | Categories
+      i.dropdown.icon
+      .menu
+        a.item Electronics
+        a.item Automotive
+        a.item Home
+
+  .ui.tab.attached.bottom(data-tab="tab-name")
+    p Tab 1
+  .ui.tab.attached.bottom(data-tab="tab-name2")
+    p Tab 2
