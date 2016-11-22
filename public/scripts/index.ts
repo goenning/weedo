@@ -7,7 +7,6 @@ const hideOrShowActions = () => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  $('.menu .item').tab();
 
   newIdea.addEventListener('keyup', () => {
     hideOrShowActions();

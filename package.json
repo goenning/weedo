@@ -14,8 +14,8 @@
     "watch:ts": "nodemon -e ts --watch public/scripts -x \"npm run build:ts\"",
     "build:css": "node-sass --include-path public/css public/css/main.scss public/css/main.css",
     "watch:css": "nodemon -e scss --watch public/css -x \"npm run build:css\"",
-    "migrate-up": "db-migrate up",
-    "migrate-reset": "db-migrate reset"
+    "migrate-up": "db-migrate up", // Usage: npm run migrate-up -- -e <env>
+    "migrate-reset": "db-migrate reset" // Usage: npm run migrate-reset -- -e <env>
   },
   "keywords": [],
   "author": "",
