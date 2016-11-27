@@ -17,7 +17,7 @@ exports.up = function (db, done) {
         }
       }
     },
-    idea: { type: 'string', length: 200, notNull: true },
+    text: { type: 'string', length: 200, notNull: true },
     votes: { type: 'int', unsigned: true, notNull: true },
     created_on: { type: 'datetime', notNull: true },
     modified_on: { type: 'datetime', notNull: true }

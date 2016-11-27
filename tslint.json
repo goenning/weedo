@@ -11,6 +11,9 @@
       "member-ordering": [
         false
       ],
+      "only-arrow-functions": [
+        false
+      ],
       "quotemark": [
         true, "single"
       ],

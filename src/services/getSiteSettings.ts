@@ -16,5 +16,6 @@ export async function getSiteSettings(host: string): Promise<SiteSettings | null
   if (!settings) {
     settings = await findByHostname(url.hostname.substring(0, url.hostname.indexOf('.')));
   }
+
   return settings;
 };

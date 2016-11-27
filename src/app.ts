@@ -1,5 +1,6 @@
 import * as express from 'express';
 import { getSiteSettings } from './services/getSiteSettings';
+import { queryIdeas } from './services/queryIdeas';
 
 export const app = express();
 
@@ -16,6 +17,7 @@ app.use(async (req, res, next) => {
   next();
 });
 
-app.get('/', (req, res, next) => {
-  res.render('index', { });
+app.get('/', async (req, res, next) => {
+  const ideas = queryIdeas(res.locals.site);
+  res.render('index', ideas);
 });
