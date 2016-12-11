@@ -18,6 +18,6 @@ app.use(async (req, res, next) => {
 });
 
 app.get('/', async (req, res, next) => {
-  const ideas = queryIdeas(res.locals.site);
-  res.render('index', ideas);
+  const ideas = await queryIdeas(res.locals.site);
+  res.render('index', { ideas });
 });

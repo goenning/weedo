@@ -11,3 +11,16 @@ block content
       .or
       button#cancel-idea.ui.button Cancel
 
+  .ui.relaxed.divided.huge.list
+    each idea in ideas
+      .item
+        .ui.mini.statistic.content.left.floated
+          .value
+            | #{idea.votes}
+          .label
+            | votes
+        .content
+          a.header #{idea.text}
+          .description by Guilherme Oenning 
+            .ui.grey.horizontal.label.mini 
+              | Planned
